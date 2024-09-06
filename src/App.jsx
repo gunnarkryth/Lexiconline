@@ -9,8 +9,13 @@ import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { API } from "./Pages/API";
 import { MissingPage } from "./Pages/MissingPage";
+import { useEffect } from "react";
 
 function App() {
+
+
+  
+
   return (
     <Wrapper>
       <Router>

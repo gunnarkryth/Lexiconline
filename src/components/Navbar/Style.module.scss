@@ -4,37 +4,17 @@
   position: relative;
   background-color: v.$accent;
 
-  .circle {
-    position: absolute;
-    right: 0;
-    bottom: -7rem;
-    left: 0;
-    justify-self: center;
-    z-index: -1;
-    border: none;
-    border-radius: 50%;
-    background-color: v.$accent;
-    width: 18rem;
-    height: 18rem;
-    .imgContainer {
-      border-radius: 50%;
-      background-color: v.$accent_dark;
-      img {
-        width: 53px;
-        height: 53px;
-      }
-    }
-  }
 
   ul {
     display: flex;
     justify-content: space-around;
-    gap: 1.5rem;
     list-style: none;
     li {
       padding: 1rem;
       a {
-        padding: 2rem;
+        text-align: center;
+        font-weight: 300;
+        font-size: 24px;
         color: v.$section;
         text-decoration: none;
       }
