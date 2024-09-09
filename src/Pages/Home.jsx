@@ -26,6 +26,29 @@ export const Home = () => {
           />
           <button onClick={fetchData}>Button</button>
         </div>
+        {data && (
+          <div className={s.resultContainer}>
+            <h2>{data.word}</h2>
+
+            {/* Phonetics */}
+            {data.phonetics && data.phonetics.length > 0 && (
+              <div className={s.phonetics}>
+                <h4>Pronunciation</h4>
+                {data.phonetics.map((phonetic, idx) => (
+                  <div key={idx}>
+                    {phonetic.text && <p>{phonetic.text}</p>}
+                    {phonetic.audio && (
+                      <audio controls>
+                        <source src={phonetic.audio} type="audio/mpeg" />
+                        Your browser does not support this audio format.
+                      </audio>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </CutOut>
     </>
   );
