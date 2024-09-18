@@ -6,33 +6,27 @@
   margin-top: -7rem;
   width: 100%;
   .CutOut {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     background-color: v.$section;
-    padding: 38px;
-    width: 75%;
-    min-height: 277px;
-    color: v.$header;
+    padding: 2rem;
+    width: 80%;
 
     h2 {
-      margin-bottom: 20px;
-      color: v.$header; // Mørkere farve til overskrifter
-      font-size: 2.5rem;
       text-align: center;
     }
 
     .searchContainer {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
 
       input {
         margin-right: 10px;
-        border: 2px solid v.$accent; // Bruger accent-farven til inputfeltets kant
+        border: 2px solid v.$accent;
         border-radius: 5px;
         padding: 10px;
-        width: 300px;
+        width: 250px;
         font-size: 1.2rem;
       }
 
@@ -43,59 +37,70 @@
         border-radius: 5px;
         background-color: v.$accent;
         padding: 10px 20px;
-        color: v.$section; // Lys farve til teksten
+        color: v.$section;
         font-size: 1.2rem;
 
         &:hover {
-          background-color: v.$accent_dark; // Mørkere version ved hover
+          background-color: v.$accent_dark;
         }
       }
     }
 
     .resultContainer {
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 1rem;
       background-color: v.$section;
-      padding: 20px;
-      color: v.$paragraph; // Sort tekst til indhold
+      padding: 1.5rem;
 
       h2 {
-        margin-bottom: 10px;
-        color: v.$title; // Titelfarve
-        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: v.$title;
+        font-size: 2.5rem;
+        text-align: center;
       }
 
-      .phonetics,
-      .definitions {
-        margin-bottom: 2rem;
+      .phonetics {
+        margin-bottom: 1rem;
 
         h4 {
-          margin-bottom: 10px;
-          color: v.$header; // Mørkere farve til underoverskrifter
+          color: v.$header;
           font-size: 1.5rem;
         }
 
         p {
-          margin-bottom: 5px;
           font-size: 1.2rem;
         }
+      }
 
-        audio {
-          margin-top: 10px;
+      .definitions {
+        margin-top: 1rem;
+
+        h4 {
+          color: v.$header;
+          font-size: 1.5rem;
+        }
+
+        .definitionItem {
+          margin-bottom: 1rem;
+
+          p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+          }
+
+          .example {
+            color: v.$header;
+            font-style: italic;
+            font-size: 0.9rem;
+          }
         }
       }
 
       .synonym,
       .antonym {
-        transition: color 0.3s ease;
         cursor: pointer;
-        margin-right: 5px;
-        color: v.$accent; // Fremhæv links i accentfarve
-        text-decoration: underline;
-
-        &:hover {
-          color: v.$accent_dark; // Mørkere ved hover
-        }
+        margin-right: 0.5rem;
+        color: v.$accent;
       }
     }
   }
